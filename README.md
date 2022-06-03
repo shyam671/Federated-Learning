@@ -7,7 +7,7 @@
 | ResNet-50   |        BN           |         23528522     |       86.91       |
 | ResNet-50   |        GN           |         23528522     |       87.48       |
 
-![Drag Racing](simple.gif)![Drag Racing](mad.gif)
+![Drag Racing](Acc_bn_chart.png)![Drag Racing](bn_loss_chart.png)
 
 ## Fed-Avg training
 
