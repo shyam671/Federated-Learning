@@ -24,5 +24,5 @@
 
 | Model       | Normalization Layer | Accuracy / Link   |
 | ----------- | ------------------- | ----------------- |
-| ResNet-50   |        BN           |       --.--       |
-| ResNet-50   |        GN           |       --.--       |
+| ResNet-50   |        BN           |       34.55       |
+| ResNet-50   |        GN           |       51.01       |
