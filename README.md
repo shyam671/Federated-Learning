@@ -27,4 +27,4 @@
 | ResNet-50   |        BN           |       34.55       |
 | ResNet-50   |        GN           |       51.01       |
 
-![Drag Racing](Plots/pt-5_iid.png)
+![Drag Racing](Plots/pt-5.png)
