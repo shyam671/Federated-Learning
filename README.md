@@ -50,10 +50,10 @@ This acts as the upper bound for all the below compared federated learning metho
 |  Values     | `100` | `0.01`      | `50` | `SGD` | `64` | `5` | `0.5/1/5` | `0.1` |
 
 
-| Method      | Accuracy @Beta=0.5  |  Accuracy @Beta=0.1  |  
-| ----------- | ------------------- | -------------------- | 
-| FedAvg      |        89.03        |        66.15         |  
-| FedProx     |        88.66        |        72.47         |  
-| MOON        |        90.00        |        68.31         |  
+| Method      | Accuracy @Beta=0.5  |  Accuracy @Beta=1  |   Accuracy @Beta=1  |  
+| ----------- | ------------------- | -----------------  | -----------------   | 
+| FedAvg      |        63.62        |        66.15       |    66.15            |
+| FedProx     |        68.23        |        72.47       |   72.47             |
+| MOON        |        75.93        |        68.31       |   68.31             | 
 
 ![Drag Racing](Plots/pt-5.png)
