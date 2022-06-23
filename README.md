@@ -41,8 +41,8 @@ This acts as the upper bound for all the below compared federated learning metho
 
 | Model       | Normalization Layer | Accuracy / Link   |
 | ----------- | ------------------- | ----------------- |
-| ResNet-50   |        BN           |       34.55       |
-| ResNet-50   |        GN           |       51.01       |
+| ResNet-50   |        BN           |       60.00       |
+| ResNet-50   |        GN           |       60.51       |
 
 ## MOON (Model-Contrastive Federated Learning)
 | Parameters  | # of clients | Learning Rate | Comm Rounds | Optimizer | Client-BatchSize | Client Epochs | Beta (NonIID) | Client Fraction |
@@ -50,10 +50,10 @@ This acts as the upper bound for all the below compared federated learning metho
 |  Values     | `100` | `0.01`      | `50` | `SGD` | `64` | `5` | `0.5/1/5` | `0.1` |
 
 
-| Method      | Accuracy @Beta=0.5  |  Accuracy @Beta=1  |   Accuracy @Beta=1  |  
+| Method      | Accuracy @Beta=0.5  |  Accuracy @Beta=1  |   Accuracy @Beta=5  |  
 | ----------- | ------------------- | -----------------  | -----------------   | 
-| FedAvg      |        63.62        |        66.15       |    66.15            |
-| FedProx     |        68.23        |        72.47       |   72.47             |
-| MOON        |        75.93        |        68.31       |   68.31             | 
+| FedAvg      |        49.87        |               |                |
+| FedProx     |        59.10        |        62.88       |   67.61             |
+| MOON        |        63.62        |        68.23       |   75.93             | 
 
 ![Drag Racing](Plots/pt-5.png)
