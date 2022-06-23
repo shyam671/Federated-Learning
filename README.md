@@ -45,12 +45,15 @@ This acts as the upper bound for all the below compared federated learning metho
 | ResNet-50   |        GN           |       51.01       |
 
 ## MOON (Model-Contrastive Federated Learning)
-Parameters: Number of client:4, Network: Resnet-18, Communication Rounds: 20, Client Epochs: 5, Dataset: CIFAR-10
+| Parameters  | # of clients | Learning Rate | Comm Rounds | Optimizer | Client-BatchSize | Client Epochs | Beta (NonIID) | Client Fraction |
+| ----------- | ---------- | ------------- | ------ | ------ | ------ | ----- | ---- | ---------- |
+|  Values     | `100` | `0.01`      | `50` | `SGD` | `64` | `5` | `0.5/1/5` | `0.1` |
 
-| Method      | Accuracy @Beta=0.5  |  Accuracy @Beta=0.1  |     Model Link    |
-| ----------- | ------------------- | -------------------- | ----------------- |
-| FedAvg      |        89.03        |        66.15         |                   |
-| FedProx     |        88.66        |        72.47         |                   |
-| MOON        |        90.00        |        68.31         |                   |
+
+| Method      | Accuracy @Beta=0.5  |  Accuracy @Beta=0.1  |  
+| ----------- | ------------------- | -------------------- | 
+| FedAvg      |        89.03        |        66.15         |  
+| FedProx     |        88.66        |        72.47         |  
+| MOON        |        90.00        |        68.31         |  
 
 ![Drag Racing](Plots/pt-5.png)
