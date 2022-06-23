@@ -20,7 +20,7 @@ This acts as the upper bound for all the below compared federated learning metho
 | ResNet-50   |        BN           |         23528522     |       86.91       |
 | ResNet-50   |        GN           |         23528522     |       87.48       |
 
-![Drag Racing](Plots/pt-1n.png)
+![Drag Racing](Plots/pt1.png)
 
 ## Fed-Avg training
 
