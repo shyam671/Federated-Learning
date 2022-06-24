@@ -22,7 +22,8 @@ This acts as the upper bound for all the below compared federated learning metho
 
 ![Drag Racing](Plots/pt1.png)
 
-## Federated Average
+
+## [Federated Average](https://github.com/shyam671/Federated-Learning-Project/tree/main/code/FedAvg)
 
 | Parameters  | # of clients | Learning Rate | Comm Rounds | Optimizer | Client-BatchSize | Client Epochs | Beta (NonIID) | Client Fraction |
 | ----------- | ---------- | ------------- | ------ | ------ | ------ | ----- | ---- | ---------- |
