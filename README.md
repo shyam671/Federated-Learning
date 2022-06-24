@@ -68,5 +68,5 @@ This acts as the upper bound for all the below compared federated learning metho
 ![Drag Racing](Plots/pt-ext-loss.png)
 ![Drag Racing](Plots/pt-ext-acc.png)
 
-###Acknowledgement 
+### Acknowledgement 
 
