@@ -70,3 +70,4 @@ This acts as the upper bound for all the below compared federated learning metho
 
 ### Acknowledgement 
 
+We thank @QinbinLi and @FedML for their open source code that helped in our project and @debcaldarola for clarifying our doubts.
