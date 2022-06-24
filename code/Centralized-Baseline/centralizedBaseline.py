@@ -1,5 +1,3 @@
-# Removed Weight Deacy
-
 # -*- coding: utf-8 -*-
 """Point 1 - Centralized training.ipynb
 
@@ -33,8 +31,9 @@ from PIL import Image
 import random
 import numpy as np
 import matplotlib.pyplot as plt
-# %matplotlib inline
 import time
+import collections
+
 
 # set manual seed for reproducibility
 # [100, 0, 42] => list of seeds
@@ -49,27 +48,6 @@ torch.manual_seed(seed)
 torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
 
-"""## Dataset definition
-
-Observation: since this work is an implementation of the paper: Deep Residual Learning for Image Recognition, we will stick with the hyperparameters and transformation used inside it. 
-The only change happens in the architecture, where we consider both GN (Group Normalization) and BN (Batch Normalization) in two different experiments.
-"""
-
-# Use the standard data augmentation pipeline: random crop, random horizontal flip, normalization.
-# Observation: The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. Should we use RandomCrop??
-"""
- On github Q&A I have found this: 
- "And while I'm asking, why do you do: 
- transforms.RandomCrop(32, padding=4)? 
- I.e. aren't the images already 32x32? 
- And why pad the images?"
- Answer: 
- "I think after set padding=4 the image become 40 x 40, 
- random crop operator can get more result. If we do not set padding=4, 
- random crop only get origin image."
- 
- https://github.com/kuangliu/pytorch-cifar/issues/19 
-"""
 from sklearn.model_selection import train_test_split
 # Data transforms (normalization + data augmentation)
 # Correct values for mean and std for normalization (normalization is done per channel)
@@ -85,25 +63,13 @@ test_transform = tt.Compose([tt.ToTensor(),
 # Let's try first with no transformations, then we will pass the object above in the parameter transform
 # 1. Define train and test datasets
 train_dataset = torchvision.datasets.CIFAR10(root='./data', train=True, transform=train_transform, download=True)
-# test_dataset = torchvision.datasets.CIFAR10(root='./data', train=False, transform=test_transform, download=True)
 validation_dataset = torchvision.datasets.CIFAR10(root='./data', train=False, transform=test_transform, download=True)
-# The split between train and validation is 90% train, 10% validation since they have used 45k images for train and 5k images for test
-# train_dataset, validation_dataset = train_test_split(dataset, test_size= 0.1, random_state=42)
-# Define the validation set
-# 2. Make the dataset iterable
 batch_size = 256
 train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True)
-# validation_loader = DataLoader(dataset=validation_dataset, batch_size=batch_size)
 validation_loader = DataLoader(dataset=validation_dataset, batch_size=batch_size)
-#test_loader = DataLoader(dataset=test_dataset, batch_size=batch_size)
 
-# Check the Iterability (only for the sake of learning purposes)
-# If something is not iterable and you pass it as object the result should be False
-import collections
 print(isinstance(train_loader, collections.Iterable))
 print(isinstance(validation_loader, collections.Iterable))
-# print(isinstance(test_loader, collections.Iterable))
-# Check the dimensionality is correct
 print(len(train_dataset))
 print(len(validation_dataset))
 # print(len(test_dataset))
@@ -125,14 +91,7 @@ def display_batch(train_loader):
     images, labels = next(iter(train_loader))
     print(images.shape)
     im = make_grid(images[:20], nrow=5)
-    # Since we have normalized the images in order to display them in
-    # the correct way, we have to do a denormalization.
     im_inv = inv_normalization(im)
-    #plt.figure(figsize=(14, 10))
-    #plt.imshow(np.transpose(im_inv.numpy(), (1, 2, 0)))
-    #plt.show()
-
-#display_batch(train_loader)
 
 """## Network Architecture + Model Definition
 
@@ -204,15 +163,6 @@ def train_vs_validation_loss(epochs, train_losses, val_losses):
   plt.show()
 
 def training_loop(model,optimizer,epochs,scheduler):
-  """
-  checkpoint = torch.load(MODEL_SAVED)
-  epoch = checkpoint['epoch']
-  BN_model.load_state_dict(checkpoint['model_state_dict'])
-  optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
-  train_losses = checkpoint['training_loss_x_epoch']
-  val_losses = checkpoint['validation_loss_x_epoch']
-  scheduler.load_state_dict(checkpoint['scheduler_state_dict'])
-  """
   MODEL_SAVED = 'model_.pt'
   # VERY BASIC TRAINING LOOP
   epochs = epochs 
