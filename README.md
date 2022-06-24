@@ -44,6 +44,8 @@ This acts as the upper bound for all the below compared federated learning metho
 | ResNet-50   |        BN           |       60.00       |
 | ResNet-50   |        GN           |       60.51       |
 
+![Drag Racing](Plots/pt2-noniid.png)
+
 ## MOON (Model-Contrastive Federated Learning)
 | Parameters  | # of clients | Learning Rate | Comm Rounds | Optimizer | Client-BatchSize | Client Epochs | Beta (NonIID) | Client Fraction |
 | ----------- | ---------- | ------------- | ------ | ------ | ------ | ----- | ---- | ---------- |
