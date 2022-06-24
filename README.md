@@ -46,7 +46,7 @@ This acts as the upper bound for all the below compared federated learning metho
 
 ![Drag Racing](Plots/pt2-noniid.png)
 
-## MOON (Model-Contrastive Federated Learning)
+## Model-Contrastive Federated Learning
 | Parameters  | # of clients | Learning Rate | Comm Rounds | Optimizer | Client-BatchSize | Client Epochs | Beta (NonIID) | Client Fraction |
 | ----------- | ---------- | ------------- | ------ | ------ | ------ | ----- | ---- | ---------- |
 |  Values     | `100` | `0.01`      | `50` | `SGD` | `64` | `5` | `0.5/1/5` | `0.1` |
