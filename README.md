@@ -52,7 +52,7 @@ This acts as the upper bound for all the below compared federated learning metho
 
 | Method      | Accuracy @Beta=0.5  |  Accuracy @Beta=1  |   Accuracy @Beta=5  |  
 | ----------- | ------------------- | -----------------  | -----------------   | 
-| FedAvg      |        49.87        |               |                |
+| FedAvg      |        49.87        |        54.17       |   57.34             |
 | FedProx     |        59.10        |        62.88       |   67.61             |
 | MOON        |        63.62        |        68.23       |   75.93             | 
 
