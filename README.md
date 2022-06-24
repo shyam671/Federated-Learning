@@ -5,7 +5,7 @@
 * torchvision >= 0.2.1
 * scikit-learn >= 0.23.1
 
-## Centralized training
+## Centralized training [Code](https://github.com/shyam671/Federated-Learning-Project/tree/main/code/Centralized-Baseline)
 
 The maximum classification performance achived by the ResNet-50 when trained and validated on CIFAR-10 dataset.
 This acts as the upper bound for all the below compared federated learning methods.
