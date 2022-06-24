@@ -58,4 +58,4 @@ This acts as the upper bound for all the below compared federated learning metho
 | FedProx     |        59.10        |        62.88       |   67.61             |
 | MOON        |        63.62        |        68.23       |   75.93             | 
 
-![Drag Racing](Plots/pt-5.png)
+![Drag Racing](Plots/pt-ext-loss.png)
