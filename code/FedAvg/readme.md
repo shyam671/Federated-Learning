@@ -12,6 +12,5 @@ usage: fedavg.py    --norm {gn/bn, default='bn'}
 ```
 
 ### sample command
-* python fedavg.py --norm bn --partition noniid --commrounds 150 --clientfr 0.1 --numclient 100 --clientepochs 20 --clientbs 64 --clientlr 0.0001 
-* python fedavg.py --norm bn --partition noniid --commrounds 50 --clientfr 0.1 --numclient 100 --clientepochs 20 --clientbs 64 --clientlr 0.0001 --alpha_partition 1.0
-* python fedavg.py --norm bn --partition noniid --commrounds 50 --clientfr 0.1 --numclient 100 --clientepochs 20 --clientbs 64 --clientlr 0.0001 --alpha_partition 5.0
+* `python fedavg.py --norm bn --partition noniid --commrounds 50 --clientfr 0.1 --numclient 100 --clientepochs 20 --clientbs 64 --clientlr 0.0001 --alpha_partition 1.0`
+
