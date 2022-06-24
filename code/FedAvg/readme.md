@@ -1,4 +1,3 @@
-### Training
 ```
 usage: fedavg.py    --norm {gn/bn, default='bn'}
                     --partition  {iid/noniid, default = 'noniid'}
