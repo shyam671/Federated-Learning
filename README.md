@@ -59,3 +59,4 @@ This acts as the upper bound for all the below compared federated learning metho
 | MOON        |        63.62        |        68.23       |   75.93             | 
 
 ![Drag Racing](Plots/pt-ext-loss.png)
+![Drag Racing](Plots/pt-ext-acc.png)
