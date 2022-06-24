@@ -58,5 +58,11 @@ This acts as the upper bound for all the below compared federated learning metho
 | FedProx     |        59.10        |        62.88       |   67.61             |
 | MOON        |        63.62        |        68.23       |   75.93             | 
 
+| Method      | # of Rounds@beta=0.5|  SpeedUp@beta=0.5  | # of Rounds@beta=1  |   SpeedUp@beta=1 | # of Rounds@beta=5  |   SpeedUp@beta=5 |
+| ----------- | ------------------- | -----------------  | -----------------   | ------------------- | -----------------  | -----------------   |
+| FedAvg      |        50           |        1x          |   50                |     1x              |      50            | 1x                  |
+| FedProx     |        35           |        1.42x       |   34                | 1.47x | 27 | 1.85x |            
+| MOON        |        25           |        2x          |   23                | 2.17x | 16 | 3.12x|
+
 ![Drag Racing](Plots/pt-ext-loss.png)
 ![Drag Racing](Plots/pt-ext-acc.png)
