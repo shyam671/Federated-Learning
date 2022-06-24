@@ -1,5 +1,5 @@
 ```
-usage: fedavg.py    --model {resnet18 (ResNet18 with Batch Norm) , resnet18gn (ResNet18 with group norm)}
+usage: main.py      --model {resnet18 (ResNet18 with Batch Norm) , resnet18gn (ResNet18 with group norm)}
                     --lr  {learning rate of client, default = 0.01}
                     --batch-size {default = 64}
                     --beta {variable to control heterogeneity in data partition, default = 0.5}                    
