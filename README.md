@@ -68,6 +68,8 @@ This acts as the upper bound for all the below compared federated learning metho
 ![Drag Racing](Plots/pt-ext-loss.png)
 ![Drag Racing](Plots/pt-ext-acc.png)
 
+## [MOON-Prox](https://github.com/shyam671/Federated-Learning-Project/tree/main/code/moon)
+
 ### Acknowledgement 
 
 We thank @QinbinLi and @FedML for their open source code that helped in our project and @debcaldarola being a wonderful mentor throughout the project.
