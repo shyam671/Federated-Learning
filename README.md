@@ -74,14 +74,15 @@ MOON-Prox is an intuitive extention of MOON. In this, we add a proximal term tha
 ```math
 l = l_{cross-entropy} + l_{contrastive} + \frac{\mu}{2\alpha}\Vert  \omega_{local} - \omega_{global} \Vert^2
 ```
+The main advantage of this method is that it has the same number of parameters as moon.
 
-| Method      | Acc@Epochs = 50  |  Accuracy @Epochs = 100  |
+| Method      | Acc@Epochs = 50@Beta=0.5  |  Accuracy @Epochs = 100Beta=0.5 |
 | ----------- | ------------------- | -----------------  |
 | FedAvg      |        49.87        |        56.96       |
 | FedProx     |        59.10        |        65.21       |   
-| MOON        |        63.62        |        68.23       | 
-| MOON-Prox($\alpha$= 100)|||
-| MOON-Prox($\alpha$= 500)|||
+| MOON        |        63.62        |        77.03       | 
+| MOON-Prox($\alpha$= 100)|66.50|77.25|
+| MOON-Prox($\alpha$= 500)|63.16|77.59|
 
 ![Drag Racing](Plots/moonprox.png)
 ### Acknowledgement 
