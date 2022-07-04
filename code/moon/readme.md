@@ -8,8 +8,10 @@ usage: main.py      --model {resnet18 (ResNet18 with Batch Norm) , resnet18gn (R
                     --epochs {number of client epochs, default = 20}
                     --sample_fraction {fraction of clients taken at each round, default = 0.1}
                     --clientlr {learning rate of client, default = 0.001}
+                    --alpha {default = 1000}
 ```
 
 ### sample command
 * `python main.py --dataset=cifar10 --model=resnet18gn --alg=moon --lr=0.01 --mu=5 --epochs=5 --comm_round=50 --n_parties=100 --partition=noniid --beta=0.5 --logdir='./logs/' --datadir='./data/' --sample_fraction 0.1`
 * `python main.py --dataset=cifar10 --model=resnet18 --alg=moon --lr=0.01 --mu=5 --epochs=5 --comm_round=50 --n_parties=100 --partition=noniid --beta=0.5 --logdir='./logs/' --datadir='./data/' --sample_fraction 0.1`
+* `python main.py --dataset=cifar10 --model=resnet18 --alg=moon --lr=0.01 --mu=5 --epochs=5 --comm_round=50 --n_parties=100 --partition=noniid --beta=0.5 --logdir='./logs/' --datadir='./data/' --sample_fraction 0.1 --alpha 100`
