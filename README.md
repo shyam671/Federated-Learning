@@ -82,6 +82,7 @@ l = l_{cross-entropy} + l_{contrastive} + \frac{\mu}{2\alpha}\Vert  \omega_{loca
 | MOON        |        63.62        |        68.23       | 
 | MOON-Prox($\alpha$= 100)|||
 | MOON-Prox($\alpha$= 500)|||
+
 ![Drag Racing](Plots/moonprox.png)
 ### Acknowledgement 
 
