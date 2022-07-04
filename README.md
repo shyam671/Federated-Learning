@@ -69,10 +69,10 @@ This acts as the upper bound for all the below compared federated learning metho
 ![Drag Racing](Plots/pt-ext-acc.png)
 
 ## [MOON-Prox](https://github.com/shyam671/Federated-Learning-Project/tree/main/code/moon)
-MOON-Prox is an intuitive extention of MOON. In this, we add a proximal term that acts as regulariser enforcing the local model to be close to the global model. It is termed as below: 
+MOON-Prox is an intuitive extention of MOON. In this, we add a proximal term that acts as regulariser enforcing the local model to be close to the global model. The loss for local device can be written as: 
 
 ```math
-\sqrt{3}
+l = l_{cross-entropy} + l_{contrastive} + \mu
 ```
 
 ![Drag Racing](Plots/moonprox.png)
