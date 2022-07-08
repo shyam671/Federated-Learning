@@ -15,7 +15,7 @@ This acts as the upper bound for all the below compared federated learning metho
 |  Values     |`ResNet50`| `CIFAR-10` | `1e-4`        | `256` | `150` | `Adam` | `OneCycleLR` | 
 
 
-| Model       | Normalization Layer | Number of Parameters | Accuracy / Link   |
+| Model       | Normalization Layer | Number of Parameters | Accuracy          |
 | ----------- | ------------------- | -------------------- | ----------------- |
 | ResNet-50   |        BN           |         23528522     |       86.91       |
 | ResNet-50   |        GN           |         23528522     |       87.48       |
@@ -31,7 +31,7 @@ This acts as the upper bound for all the below compared federated learning metho
 
 ### IID Distribution 
 
-| Model       | Normalization Layer | Accuracy / Link   |
+| Model       | Normalization Layer | Accuracy          |
 | ----------- | ------------------- | ----------------- |
 | ResNet-50   |        BN           |       81.14       |
 | ResNet-50   |        GN           |       78.60       |
@@ -40,7 +40,7 @@ This acts as the upper bound for all the below compared federated learning metho
 
 ### Non-IID Distribution 
 
-| Model       | Normalization Layer | Accuracy / Link   |
+| Model       | Normalization Layer | Accuracy          |
 | ----------- | ------------------- | ----------------- |
 | ResNet-50   |        BN           |       60.00       |
 | ResNet-50   |        GN           |       60.51       |
