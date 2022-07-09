@@ -61,16 +61,16 @@ This acts as the upper bound for all the below compared federated learning metho
 
 | Model       | Normalization Layer | Accuracy          |
 | ----------- | ------------------- | ----------------- |
-| ResNet-50   |        BN           |       81.14       |
-| ResNet-50   |        GN           |       78.60       |
+| ResNet-49   |        BN           |       55.28       |
+| ResNet-49   |        GN           |       53.27       |
 
 
 ### Non-IID Distribution 
 
 | Model       | Normalization Layer | Accuracy          |
 | ----------- | ------------------- | ----------------- |
-| ResNet-50   |        BN           |       60.00       |
-| ResNet-50   |        GN           |       60.51       |
+| ResNet-49   |        BN           |       27.01       |
+| ResNet-49   |        GN           |       29.47       |
 
 
 ## [Model-Contrastive Federated Learning](https://github.com/shyam671/Federated-Learning-Project/tree/main/code/moon)
