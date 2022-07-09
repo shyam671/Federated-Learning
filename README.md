@@ -64,6 +64,8 @@ This acts as the upper bound for all the below compared federated learning metho
 | ResNet-49   |        BN           |       55.28       |
 | ResNet-49   |        GN           |       53.27       |
 
+![Drag Racing](Plots/fedgkt-iid.png)
+
 
 ### Non-IID Distribution 
 
