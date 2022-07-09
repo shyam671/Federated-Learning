@@ -49,9 +49,13 @@ This acts as the upper bound for all the below compared federated learning metho
 
 ## [Federated Group Knowledge Transfer](https://github.com/shyam671/Federated-Learning-Project/tree/main/code/FedGKT)
 
-| Parameters  | # of clients | Learning Rate | Comm Rounds | Optimizer | Client-BatchSize | Client Epochs | Beta (NonIID) | Client Fraction |
+| Parameters  | # of clients | Learning Rate | Comm Rounds | Optimizer | Client-BatchSize | Client Epochs | Beta | Client Fraction |
 | ----------- | ---------- | ------------- | ------ | ------ | ------ | ----- | ---- | ---------- |
-|  Values     | `100` | `1e-4`      | `150` | `Adam` | `64` | `20` | `0.5` | `0.1` |
+|  Values     | `100` | `1e-4`      | `50` | `Adam/SGD` | `256` | `5` | `0.5` | `0.1` |
+
+| Parameters  | Alpha | Temperature | Server Epochs | 
+| ----------- | ---------- | ------------- | ------ |
+|  Values     | `1` | `3`      | `50` | `5` |
 
 ### IID Distribution 
 
