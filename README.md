@@ -74,6 +74,8 @@ This acts as the upper bound for all the below compared federated learning metho
 | ResNet-49   |        BN           |       27.01       |
 | ResNet-49   |        GN           |       19.79       |
 
+![Drag Racing](Plots/fedgkt-noniid.png)
+
 [Additional Experimentation](Plots/FedGKTexp.pdf)
 
 ## [Model-Contrastive Federated Learning](https://github.com/shyam671/Federated-Learning-Project/tree/main/code/moon)
