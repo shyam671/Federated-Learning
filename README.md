@@ -72,7 +72,7 @@ This acts as the upper bound for all the below compared federated learning metho
 | Model       | Normalization Layer | Accuracy          |
 | ----------- | ------------------- | ----------------- |
 | ResNet-49   |        BN           |       27.01       |
-| ResNet-49   |        GN           |       29.47       |
+| ResNet-49   |        GN           |       19.79       |
 
 [Additional Experimentation](Plots/FedGKTexp.pdf)
 
