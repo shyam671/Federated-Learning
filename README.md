@@ -114,6 +114,10 @@ The main advantage of this method is that it has the same number of parameters a
 | MOON-Prox($\alpha$= 500)|63.16|77.59|
 
 ![Drag Racing](Plots/moonprox.png)
-### Acknowledgement 
 
+## [Gradient Attack in Federated Learning](https://github.com/shyam671/Federated-Learning-Project/tree/main/code/GradientAttack)
+
+![Drag Racing](Plots/attack.png)
+
+### Acknowledgement 
 We thank @QinbinLi and @FedML for their open source code that helped in our project and @debcaldarola being a wonderful mentor throughout the project.
