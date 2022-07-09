@@ -47,6 +47,28 @@ This acts as the upper bound for all the below compared federated learning metho
 
 ![Drag Racing](Plots/pt2-noniid.png)
 
+## [Federated Group Knowledge Transfer](https://github.com/shyam671/Federated-Learning-Project/tree/main/code/FedGKT)
+
+| Parameters  | # of clients | Learning Rate | Comm Rounds | Optimizer | Client-BatchSize | Client Epochs | Beta (NonIID) | Client Fraction |Server Epochs | 
+| ----------- | ---------- | ------------- | ------ | ------ | ------ | ----- | ---- | ---------- |
+|  Values     | `100` | `1e-4`      | `150` | `Adam/SGD` | `256` | `5` | `0.5` | `0.1` | `5`|
+
+### IID Distribution 
+
+| Model       | Normalization Layer | Accuracy          |
+| ----------- | ------------------- | ----------------- |
+| ResNet-50   |        BN           |       81.14       |
+| ResNet-50   |        GN           |       78.60       |
+
+
+### Non-IID Distribution 
+
+| Model       | Normalization Layer | Accuracy          |
+| ----------- | ------------------- | ----------------- |
+| ResNet-50   |        BN           |       60.00       |
+| ResNet-50   |        GN           |       60.51       |
+
+
 ## [Model-Contrastive Federated Learning](https://github.com/shyam671/Federated-Learning-Project/tree/main/code/moon)
 | Parameters  | # of clients | Learning Rate | Comm Rounds | Optimizer | Client-BatchSize | Client Epochs | Beta (NonIID) | Client Fraction |
 | ----------- | ---------- | ------------- | ------ | ------ | ------ | ----- | ---- | ---------- |
