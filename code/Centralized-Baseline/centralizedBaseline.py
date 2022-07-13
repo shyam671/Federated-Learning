@@ -254,32 +254,3 @@ def training_loop(model,optimizer,epochs,scheduler):
 start_time = time.time()
 BN_model = training_loop(model=BN_model, optimizer=BN_optimizer, epochs=epochs, scheduler=BN_scheduler)
 GN_model = training_loop(model=GN_model, optimizer=GN_optimizer, epochs=epochs, scheduler=GN_scheduler)
-
-"""## Model Evaluation on the test set"""
-
-BN_model.eval()
-GN_model.eval()
-# VALIDATION PHASE
-with torch.no_grad():
-  BN_test_correct = 0
-  GN_test_correct = 0
-  for j, (test_images, test_labels) in enumerate(test_loader):
-    current_batch = len(test_labels)
-    # Send the batch to the GPU
-    test_images = Variable(test_images.cuda())
-    test_labels = Variable(test_labels.cuda())
-    # Get the outputs
-    BN_test_output = BN_model(test_images)
-    GN_test_output = GN_model(test_images)
-    # Get the prediction for the accuracy
-    _, BN_test_prediction = torch.max(BN_test_output, 1)
-    _, GN_test_prediction = torch.max(GN_test_output, 1)
-    # The result of the masking is a boolean, but we can sum the values, since True = 1, and False = 0
-    BN_test_correct += (BN_test_prediction.cpu() == test_labels.cpu()).sum()
-    GN_test_correct += (GN_test_prediction.cpu() == test_labels.cpu()).sum()
-  
-BN_test_accuracy = 100 * (BN_test_correct / len(test_dataset))
-GN_test_accuracy = 100 * (GN_test_correct / len(test_dataset))
-
-print(f"BN Test Accuracy = {BN_test_accuracy:.3e}")
-print(f"GN Test Accuracy = {GN_test_accuracy:.3e}")
