@@ -52,15 +52,14 @@ from sklearn.model_selection import train_test_split
 # Data transforms (normalization + data augmentation)
 # Correct values for mean and std for normalization (normalization is done per channel)
 stats = ((0.49139968, 0.48215841, 0.44653091),(0.24703223, 0.24348513, 0.26158784))
-# Apply transformations to train dataset
+# Apply transformations to train dataset.
 train_transform = tt.Compose([tt.ToTensor(),
                               tt.RandomCrop(32, padding=4,padding_mode='reflect'),
                               tt.RandomHorizontalFlip(p=0.5),
                               tt.Normalize(*stats)])
-# Apply transformations to test set, we have done evaluated on of the original 32×32 image without transformations.
+# Apply transformations to test set.
 test_transform = tt.Compose([tt.ToTensor(),
                              tt.Normalize(*stats)])
-# Let's try first with no transformations, then we will pass the object above in the parameter transform
 # 1. Define train and test datasets
 train_dataset = torchvision.datasets.CIFAR10(root='./data', train=True, transform=train_transform, download=True)
 validation_dataset = torchvision.datasets.CIFAR10(root='./data', train=False, transform=test_transform, download=True)
@@ -166,10 +165,6 @@ def training_loop(model,optimizer,epochs,scheduler):
   MODEL_SAVED = 'model_.pt'
   # VERY BASIC TRAINING LOOP
   epochs = epochs 
-  # Gradient clipping: Apart from the layer weights and outputs, it also helpful to limit the values of 
-  # gradients to a small range to prevent undesirable changes in parameters due to large gradient values. 
-  # This simple yet effective technique is called gradient clipping. 
-  # Learn more: https://towardsdatascience.com/what-is-gradient-clipping-b8e815cdfb48
   # We set grad_clip = 0.1 later
   grad_clip = True
   # Move the model on the GPU
@@ -204,7 +199,7 @@ def training_loop(model,optimizer,epochs,scheduler):
           nn.utils.clip_grad_value_(model.parameters(), clip_value=0.1)
       # Updates the parameters
       optimizer.step()
-      # Try OneCycle Scheduler
+      # OneCycle Scheduler
       scheduler.step()
       # Weighted AVG = loss * batch_size / len(dataset)
       running_training_loss += loss.item() * current_batch
@@ -242,17 +237,17 @@ def training_loop(model,optimizer,epochs,scheduler):
   
     # CHECKPOINT  
     torch.save({
-      #'epoch': epoch,
+      'epoch': epoch,
       'model_state_dict': model.state_dict(),
-      #'optimizer_state_dict': optimizer.state_dict(),
-      #'scheduler_state_dict': scheduler.state_dict(),
-      #'training_loss_x_epoch': train_losses,
-      #'validation_loss_x_epoch': val_losses,
+      'optimizer_state_dict': optimizer.state_dict(),
+      'scheduler_state_dict': scheduler.state_dict(),
+      'training_loss_x_epoch': train_losses,
+      'validation_loss_x_epoch': val_losses,
 
     }, MODEL_SAVED)
       
   print(f"total time {(time.time() - start_time) / 60 :.2f} minutes")
-  #train_vs_validation_loss(epochs, train_losses, val_losses)
+  train_vs_validation_loss(epochs, train_losses, val_losses)
   return model
 
 # Start 
