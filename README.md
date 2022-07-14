@@ -102,9 +102,9 @@ This acts as the upper bound for all the below compared federated learning metho
 ## [MOON-Prox](https://github.com/shyam671/Federated-Learning-Project/tree/main/code/moon)
 MOON-Prox is an intuitive extention of MOON. In this, we add a proximal term that acts as regulariser enforcing the local model to be close to the global model. The loss for local device can be written as: 
 
-```math
-l = l_{cross-entropy} 
-```
+
+$$ l = l_{cross-entropy} + l_{contrastive} + \frac{\mu}{2\alpha}\Vert  \omega_{local} - \omega_{global} \Vert^2 $$
+
 The main advantage of this method is that it has the same number of parameters as moon.
 
 | Method      | Acc@Epochs = 50@Beta=0.5  |  Accuracy @Epochs = 100Beta=0.5 |
