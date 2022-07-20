@@ -1,4 +1,4 @@
-# Federated-Learning-Project
+# Benchmarking Federated Learning Algorithms
 
 ### Dependencies
 * PyTorch >= 1.0.0
